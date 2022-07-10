@@ -21,3 +21,4 @@ if __name__ == "__main__":
             filename = file.split('.')[0]
             with zipfile.ZipFile(f'{filename}.zip', 'w') as myzip:
                 myzip.write(file)
+            os.remove(file)
